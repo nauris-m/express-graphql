@@ -1,4 +1,4 @@
-node server.js
+node server
 
 http://localhost:3000/
 
