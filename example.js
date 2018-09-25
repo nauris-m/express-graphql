@@ -12,7 +12,7 @@ let schema = buildSchema(`
 
 let root = {
     postTitle: () => {
-        return 'Build a Simple GraphQL Server With Express and NodeJS';
+        return 'Build';
     },
     blogTitle: () => {
         return 'scotch.io';
