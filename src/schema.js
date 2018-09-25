@@ -1,25 +1,13 @@
 const _ = require('lodash');
 
-// Authors и Posts получают данные в виде
-// JSON массивов с соответствующих файлов
 const Authors = require('./data/authors');
 const Posts = require('./data/posts');
 
-/*
- Здесь простая схема, построенная без использования
- языка запроса GraphQL. Мы будем использовать
- 'new GraphQLObjectType' для создание типа объекта.
- */
-
 let {
-    // Здесь базовые типы GraphQL, которые нужны в этом уроке
     GraphQLString,
     GraphQLList,
     GraphQLObjectType,
-    /* Это необходимо для создания требований
-     к полям и аргументам */
     GraphQLNonNull,
-    // Этот класс нам нужен для создания схемы
     GraphQLSchema
 } = require('graphql');
 
@@ -72,12 +60,6 @@ const BlogQueryRootType = new GraphQLObjectType({
 
 const BlogAppSchema = new GraphQLSchema({
     query: BlogQueryRootType
-    /* Если вам понадобиться создать или
-     обновить данные, вы должны использовать
-     мутации.
-     Мутации не будут изучены в этом посте.
-     mutation: BlogMutationRootType
-     */
 })
 
 module.exports = BlogAppSchema;
