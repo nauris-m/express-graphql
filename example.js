@@ -12,10 +12,10 @@ let schema = buildSchema(`
 
 let root = {
     postTitle: () => {
-        return 'Build';
+        return 'some post title';
     },
     blogTitle: () => {
-        return 'scotch.io';
+        return 'some blog title';
     }
 };
 
